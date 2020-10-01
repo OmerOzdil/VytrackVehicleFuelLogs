@@ -21,7 +21,12 @@ public class Loginpage extends BasePage {
     public WebElement loginButton;
 
 
-    public  void login(String username, String password){
+    public  void loginAsDriver(String username, String password){
+        usernameInputBox.sendKeys(username);
+        passwordInputBox.sendKeys(password);
+        loginButton.click();
+    }
+    public void loginAsSalesManager(String username, String password){
         usernameInputBox.sendKeys(username);
         passwordInputBox.sendKeys(password);
         loginButton.click();
